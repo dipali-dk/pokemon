@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Pokemon</title>
+</head>
+
+<body>
+    <div class="main-section">
+        <div class="row">
+            <div class="col-md-3">
+                <p id="pokemonCount" class="pokemon-count"></p>
+            </div>
+            <div class="col-md-6">
+                <h1 class="page-name">Pokedex</h1>
+            </div>
+            <div class="col-md-3 next-previous-button">
+                <button class="btn btn-primary" id="reloadButton" title="Reload" onclick="location.reload()">
+                    <i class="fas fa-redo-alt"></i>
+                </button>
+                <button class="btn btn-primary" id="previousButton" title="Previous" disabled>
+                    <i class="fas fa-chevron-circle-left"></i>
+                </button>
+                <button class="btn btn-primary" id="nextButton" title="Next">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </button>
+            </div>
+        </div>
+        <div>
+            <form>
+                <input type="text" id="searchPokemon" name="search" placeholder="Search by pokemon name...">
+            </form>
+        </div>
+        <div class="row" id="pokemonList"></div>
+    </div>
+
+
+    <!-- The Modal -->
+    <div class="modal" id="pokemonDetailModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p>Base Experience: <span id="baseExperience"></span></p>
+                    <p>Height: <span id="height"></span></p>
+                    <p>Weight: <span id="weight"></span></p>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#abilities">
+                                    Abilities
+                                </a>
+                            </div>
+                            <div id="abilities" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#forms">
+                                    Forms
+                                </a>
+                            </div>
+                            <div id="forms" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#moves">
+                                    Moves
+                                </a>
+                            </div>
+                            <div id="moves" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

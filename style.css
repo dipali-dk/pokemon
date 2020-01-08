@@ -1,0 +1,143 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 22px;
+    margin: 0;
+    font-size: 13px;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.main-section {
+    padding: 20px;
+}
+
+.main-section .pokemon-count {
+    line-height: 50px;
+}
+
+.main-section .next-previous-button {
+    line-height: 50px;
+    text-align: right;
+}
+
+.main-section .next-previous-button .btn-primary {
+    border-radius: 50%;
+    padding: 6px 10px;
+}
+
+.main-section .page-name {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.panel-body {
+    padding: 15px;
+    background: #0088cc;
+    color: #fff;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.panel-body .pokemon-icon {
+    background-color: #000;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 2px solid #fff;
+}
+
+.panel-body .pokemon-name {
+    float: left;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.panel-body .pokemon-info {
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#reloadButton {
+    margin-right: 20px;
+}
+
+.card-body ul,
+.modal-body p {
+    margin: 0;
+}
+
+.card-body ul li {
+    text-transform: capitalize;
+}
+
+#accordion .card {
+    margin-top: 10px;
+}
+
+#pokemonDetailModal .modal-dialog {
+    max-height: 80vh;
+}
+
+.card-body {
+    padding: .5rem 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+input[type=text] {
+    width: 415px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
